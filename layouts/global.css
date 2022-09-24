@@ -1,0 +1,9 @@
+@font-face {
+  font-family: "Playfair Display";
+  src: local("Playfair Display"),
+   url(~assets/Playfair-Display/Playfair-Display.ttf) format("truetype");
+}
+
+html {
+  font-family: "Playfair Display";
+}
