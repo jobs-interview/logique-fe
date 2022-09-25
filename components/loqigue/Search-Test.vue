@@ -11,7 +11,7 @@
             ><i class="fe-search"></i
           ></b-button>
         </div>
-        <Skeleton :loading="isLoading" />
+
         <div
           v-if="isDiplayed && !isLoading"
           class="body-strong text-center mt-2 text-black"
@@ -23,6 +23,8 @@
         </div>
       </b-col>
     </b-row>
+
+    <Skeleton :loading="isLoading" class="mt-2" />
 
     <b-row class="mt-2">
       <b-col
@@ -37,7 +39,8 @@
             <!-- <div class="d-flex"> -->
             <b-row>
               <b-col lg="6">
-                <div style="position: relative">
+                <Skeleton :loading="isLoading" />
+                <div v-if="!isLoading" style="position: relative">
                   <img
                     :src="music.artworkUrl100"
                     alt=""
@@ -66,13 +69,17 @@
               </b-col>
               <b-col>
                 <div style="width: 100%">
-                  <div class="text-secondary">
+                  <Skeleton :loading="isLoading" />
+                  <div v-if="!isLoading" class="text-secondary">
                     {{ music.artistName }}
                   </div>
-                  <div class="body-strong">
+                  <Skeleton :loading="isLoading" />
+                  <div v-if="!isLoading" class="body-strong">
                     {{ music.collectionName }}
                   </div>
+                  <Skeleton :loading="isLoading" class="mt-2" />
                   <div
+                    v-if="!isLoading"
                     class="mt-2 d-flex justify-content-between align-items-center"
                     style="box-sizing: border-box"
                   >
