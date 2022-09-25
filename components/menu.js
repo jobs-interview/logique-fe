@@ -6,19 +6,14 @@ export const menuItems = [
   },
   {
     id: 2,
-    label: 'Kasir Pintar',
+    label: 'Logique',
     icon: 'fe-grid',
     isMenuCollapsed: false,
     subItems: [
       {
         id: 3,
-        label: 'Exercise 1',
-        link: '/dashboard/by-id',
-      },
-      {
-        id: 4,
-        label: 'Exercise 2',
-        link: '/dashboard/by-kota-id',
+        label: 'Test 1',
+        link: '/loqigue',
       },
     ],
   },

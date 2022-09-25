@@ -1,5 +1,5 @@
 export const state = () => ({
-  layoutType: 'detached',
+  layoutType: 'vertical',
   layoutWidth: 'fluid',
   leftSidebarType: 'dark',
   leftSidebarSize: 'default',
