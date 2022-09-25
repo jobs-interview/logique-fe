@@ -114,11 +114,16 @@ export default {
       isNoData: false,
     }
   },
-  async mounted() {},
   methods: {
     async searchMusic() {
       try {
         this.isLoading = true
+
+        this.dataSet.forEach((data) => {
+          data.previewUrl.pause()
+          data.previewUrl.currentTime = 0
+        })
+
         const response = await LoqigueService.fetchSearchByParam({
           term: this.searchKey,
         })
